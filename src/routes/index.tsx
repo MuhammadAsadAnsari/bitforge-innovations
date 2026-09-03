@@ -92,7 +92,7 @@ function Home() {
       {/* Hero */}
       <section className="relative overflow-hidden border-b border-border">
         <div className="pointer-events-none absolute inset-0 grid-lines opacity-40 [mask-image:radial-gradient(80%_60%_at_50%_0%,black,transparent)]" />
-        <div className="relative mx-auto grid max-w-6xl gap-10 px-5 py-12 md:py-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+        <div className="relative mx-auto grid max-w-6xl gap-8 px-5 py-12 md:gap-10 md:py-16 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
           <div className="fade-up">
             <h1 className="mt-4 font-display text-3xl font-semibold leading-[1.1] md:text-5xl">
               Custom software &amp; digital marketing for growing businesses
@@ -102,7 +102,7 @@ function Home() {
               property management, and drive growth through SEO, PPC, social media, content and
               email marketing. Small team, direct communication, results you can measure.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-6 flex flex-wrap gap-3">
               <Button asChild size="lg">
                 <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
                   Book a call <ArrowRight className="ml-1 h-4 w-4" />
@@ -112,71 +112,53 @@ function Home() {
                 <Link to="/services">Our services</Link>
               </Button>
             </div>
-            <dl className="mt-6 grid max-w-lg grid-cols-3 gap-6 border-t border-border pt-5">
-              {[
-                { k: "Focus", v: "Software & marketing" },
-                { k: "Engagement", v: "Written scope" },
-                { k: "Handover", v: "Code you own" },
-              ].map((s) => (
-                <div key={s.k}>
-                  <dt className="text-xs text-muted-foreground">{s.k}</dt>
-                  <dd className="mt-1 font-display text-lg font-semibold">{s.v}</dd>
-                </div>
-              ))}
-            </dl>
           </div>
 
-          <div className="relative hidden lg:block">
-            <div className="rounded-xl border border-border bg-card p-6 shadow-card">
-              <h3 className="font-display text-lg font-semibold">What we can help with</h3>
-              <div className="mt-4 grid grid-cols-2 gap-3">
-                {[
-                  "Custom Software",
-                  "Digital Marketing",
-                  "SEO & PPC",
-                  "Business Systems",
-                  "Web & App Dev",
-                  "Brand Strategy",
-                ].map((item) => (
-                  <div
-                    key={item}
-                    className="flex items-center gap-2 rounded-md border border-border px-3 py-2.5 text-sm"
-                  >
-                    <BadgeCheck className="h-4 w-4 text-primary" />
-                    {item}
-                  </div>
-                ))}
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3">
+            {[
+              { icon: Code2, label: "Custom Software" },
+              { icon: Megaphone, label: "Digital Marketing" },
+              { icon: Search, label: "SEO & PPC" },
+              { icon: Users, label: "Business Systems" },
+              { icon: MonitorSmartphone, label: "Web & App Dev" },
+              { icon: Palette, label: "Brand Strategy" },
+            ].map((item) => (
+              <div
+                key={item.label}
+                className="flex items-center gap-2.5 rounded-lg border border-border bg-card px-3.5 py-3 text-sm font-medium shadow-sm transition-shadow hover:shadow-card"
+              >
+                <item.icon className="h-4 w-4 shrink-0 text-primary" strokeWidth={1.75} />
+                {item.label}
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Systems */}
       <Section>
-        <SectionHead
-          eyebrow="Core systems"
-          title="Four systems we build for businesses"
-          lead="Each one starts from a working base our team maintains, then gets shaped around how your business actually operates."
-        />
-        <div className="mt-8 grid gap-px overflow-hidden rounded-lg border border-border bg-border sm:grid-cols-2">
+        <div className="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <h2 className="font-display text-2xl font-semibold md:text-3xl">Systems we build</h2>
+            <p className="mt-2 max-w-xl text-sm text-muted-foreground">Adapted to how your business actually operates.</p>
+          </div>
+          <Button asChild variant="outline" size="sm">
+            <Link to="/services">View all</Link>
+          </Button>
+        </div>
+        <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {systems.map((s) => (
-            <div
+            <Link
               key={s.name}
-              className="bg-card p-5 transition-colors hover:bg-surface md:p-6"
+              to="/services"
+              className="group rounded-lg border border-border bg-card p-5 transition-all hover:border-primary/30 hover:shadow-card"
             >
-              <span className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border bg-surface">
-                <s.icon className="h-5 w-5 text-primary" strokeWidth={1.75} />
+              <span className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border bg-surface">
+                <s.icon className="h-4.5 w-4.5 text-primary" strokeWidth={1.75} />
               </span>
-              <h3 className="mt-4 font-display text-lg font-semibold">{s.name}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.line}</p>
-              <Link
-                to="/services"
-                className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-primary"
-              >
-                Details <ArrowRight className="h-3.5 w-3.5" />
-              </Link>
-            </div>
+              <h3 className="mt-3 font-display text-base font-semibold">{s.name}</h3>
+              <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground line-clamp-2">{s.line}</p>
+            </Link>
           ))}
         </div>
       </Section>
