@@ -14,7 +14,7 @@ export function Section({
 }) {
   return (
     <section id={id} className={`border-b border-border ${className}`}>
-      <div className="mx-auto max-w-6xl px-5 py-16 md:py-24">{children}</div>
+      <div className="mx-auto max-w-6xl px-5 py-12 md:py-16">{children}</div>
     </section>
   );
 }
@@ -48,7 +48,7 @@ export function PageHeader({
 }) {
   return (
     <section className="border-b border-border bg-surface">
-      <div className="mx-auto max-w-6xl px-5 py-14 md:py-20">
+      <div className="mx-auto max-w-6xl px-5 py-10 md:py-14">
         <p className="eyebrow">{eyebrow}</p>
         <h1 className="mt-3 max-w-3xl font-display text-3xl font-semibold leading-tight md:text-5xl">
           {title}
@@ -70,7 +70,7 @@ export function FinalCta({
 }) {
   return (
     <section className="bg-ink">
-      <div className="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-16 md:flex-row md:items-center md:justify-between md:py-20">
+      <div className="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-12 md:flex-row md:items-center md:justify-between md:py-16">
         <div className="max-w-xl">
           <h2 className="font-display text-2xl font-semibold text-ink-foreground md:text-3xl">
             {title}

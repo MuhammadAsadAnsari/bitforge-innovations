@@ -92,7 +92,7 @@ function Home() {
       {/* Hero */}
       <section className="relative overflow-hidden border-b border-border">
         <div className="pointer-events-none absolute inset-0 grid-lines opacity-40 [mask-image:radial-gradient(80%_60%_at_50%_0%,black,transparent)]" />
-        <div className="relative mx-auto grid max-w-6xl gap-12 px-5 py-16 md:py-24 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+        <div className="relative mx-auto grid max-w-6xl gap-10 px-5 py-12 md:py-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div className="fade-up">
             <h1 className="mt-4 font-display text-3xl font-semibold leading-[1.1] md:text-5xl">
               Custom software &amp; digital marketing for growing businesses
@@ -112,7 +112,7 @@ function Home() {
                 <Link to="/services">Our services</Link>
               </Button>
             </div>
-            <dl className="mt-10 grid max-w-lg grid-cols-3 gap-6 border-t border-border pt-6">
+            <dl className="mt-6 grid max-w-lg grid-cols-3 gap-6 border-t border-border pt-5">
               {[
                 { k: "Focus", v: "Software & marketing" },
                 { k: "Engagement", v: "Written scope" },
@@ -159,11 +159,11 @@ function Home() {
           title="Four systems we build for businesses"
           lead="Each one starts from a working base our team maintains, then gets shaped around how your business actually operates."
         />
-        <div className="mt-10 grid gap-px overflow-hidden rounded-lg border border-border bg-border sm:grid-cols-2">
+        <div className="mt-8 grid gap-px overflow-hidden rounded-lg border border-border bg-border sm:grid-cols-2">
           {systems.map((s) => (
             <div
               key={s.name}
-              className="bg-card p-6 transition-colors hover:bg-surface md:p-8"
+              className="bg-card p-5 transition-colors hover:bg-surface md:p-6"
             >
               <span className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border bg-surface">
                 <s.icon className="h-5 w-5 text-primary" strokeWidth={1.75} />
@@ -193,11 +193,11 @@ function Home() {
             <Link to="/services">All services</Link>
           </Button>
         </div>
-        <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((s) => (
             <div
               key={s.name}
-              className="rounded-lg border border-border bg-card p-6 transition-shadow hover:shadow-card"
+              className="rounded-lg border border-border bg-card p-5 transition-shadow hover:shadow-card"
             >
               <span className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border bg-surface">
                 <s.icon className="h-5 w-5 text-primary" strokeWidth={1.75} />
@@ -211,7 +211,7 @@ function Home() {
 
       {/* Trust / how we work */}
       <Section>
-        <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <SectionHead
             eyebrow="How we work"
             title="Predictable delivery, no surprises at invoice time"
