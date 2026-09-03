@@ -69,10 +69,15 @@ export function SiteFooter() {
           <div>
             <h3 className="text-sm font-semibold">Contact</h3>
             <ul className="mt-4 space-y-2.5 text-sm text-muted-foreground">
-              <li>Karachi, Pakistan</li>
+              <li>Alfiza Glass Tower, Near Nipa Chowrangi,<br />Gulshan Block 10-A, Karachi</li>
               <li>
-                <a href="mailto:hello@bitforge.dev" className="hover:text-foreground">
-                  hello@bitforge.dev
+                <a href="mailto:mail@bitforgeinnovation" className="hover:text-foreground">
+                  mail@bitforgeinnovation
+                </a>
+              </li>
+              <li>
+                <a href="tel:+923241839905" className="hover:text-foreground">
+                  +92 324 1839905
                 </a>
               </li>
               <li>Monday to Friday, 10:00 to 19:00 PKT</li>

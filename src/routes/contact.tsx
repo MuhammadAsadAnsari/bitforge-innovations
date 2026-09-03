@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { Clock, Mail } from "lucide-react";
+import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -17,7 +17,7 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Get in touch with BitForge Innovations. Email hello@bitforge.dev or book a call.",
+          "Get in touch with BitForge Innovations. Email mail@bitforgeinnovation or call +92 324 1839905.",
       },
       { property: "og:title", content: "Contact BitForge Innovations" },
       {
@@ -108,10 +108,21 @@ function Contact() {
             <ul className="mt-6 space-y-5">
               {[
                 {
+                  icon: MapPin,
+                  k: "Office",
+                  v: "Alfiza Glass Tower, Near Nipa Chowrangi,\nGulshan Block 10-A, Karachi",
+                },
+                {
                   icon: Mail,
                   k: "Email",
-                  v: "hello@bitforge.dev",
-                  href: "mailto:hello@bitforge.dev",
+                  v: "mail@bitforgeinnovation",
+                  href: "mailto:mail@bitforgeinnovation",
+                },
+                {
+                  icon: Phone,
+                  k: "Phone",
+                  v: "+92 324 1839905",
+                  href: "tel:+923241839905",
                 },
                 {
                   icon: Clock,
