@@ -3,7 +3,7 @@ import { PageHeader, Section } from "@/components/site/Section";
 import { CaseStudyCard } from "@/components/case-studies/CaseStudyCard";
 import { getAllCaseStudies } from "@/data/case-studies";
 
-export const Route = createFileRoute("/case-studies/")({
+export const Route = createFileRoute("/case-studies")({
   head: () => ({
     meta: [
       { title: "Case Studies — BitForge Innovations" },

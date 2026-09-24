@@ -3,7 +3,7 @@ import { CaseStudyContent } from "@/components/case-studies/CaseStudyContent";
 import { Section } from "@/components/site/Section";
 import { getCaseStudyBySlug } from "@/data/case-studies";
 
-export const Route = createFileRoute("/case-studies/$slug")({
+export const Route = createFileRoute("/case-studies_/$slug")({
   loader: ({ params }) => {
     const study = getCaseStudyBySlug(params.slug);
     if (!study) {
