@@ -68,15 +68,16 @@ export function CaseStudyContent({ study }: CaseStudyContentProps) {
         <p className="font-medium text-foreground">{study.keyTakeaway}</p>
       </ContentSection>
 
-      <aside
-        className="border border-dashed border-border bg-surface px-6 py-10 text-center"
-        aria-label="Diagram placeholder"
-      >
-        <p className="text-sm font-medium text-muted-foreground">Diagram here</p>
-        <p className="mt-1 text-xs text-muted-foreground">
-          Replace this block with a diagram or illustration when ready.
-        </p>
-      </aside>
+      {study.image ? (
+        <figure className="overflow-hidden rounded-lg border border-border">
+          <img
+            src={study.image}
+            alt={study.imageAlt ?? study.title}
+            className="h-auto w-full"
+            loading="lazy"
+          />
+        </figure>
+      ) : null}
     </article>
   );
 }

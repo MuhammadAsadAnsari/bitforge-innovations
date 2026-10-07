@@ -10,6 +10,8 @@ export type CaseStudy = {
   solutionNote: string;
   result: string[];
   keyTakeaway: string;
+  image?: string;
+  imageAlt?: string;
 };
 
 export const caseStudies: CaseStudy[] = [
@@ -43,6 +45,9 @@ export const caseStudies: CaseStudy[] = [
     ],
     keyTakeaway:
       "Business logic can be timezone-aware, but stored data should remain timezone-agnostic.",
+    image: "/assets/img/caseStudyNo1.jpg",
+    imageAlt:
+      "Timezone validation flow diagram for UK-based timesheet submissions",
   },
 ];
 
